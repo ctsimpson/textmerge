@@ -1,0 +1,13 @@
+*.gem
+*.rbc
+.bundle
+.config
+.yardoc
+doc/
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+tmp
+.DS_Store
+

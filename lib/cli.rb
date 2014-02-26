@@ -7,7 +7,7 @@ module Textmerge
 
       desc 'version', 'Version of the Merge utility'
       def version
-        require 'Textmerge/version'
+        require 'textmerge/version'
         say Textmerge::VERSION
       end
 

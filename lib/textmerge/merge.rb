@@ -46,7 +46,6 @@ module Textmerge
       File.open(@output_file, 'w') {|f| f.write(contents)}
     end
 
-
     protected
 
     def ask_basic_question(question)
@@ -56,7 +55,6 @@ module Textmerge
     def array_to_hash(array)
       array.inject({}) {|m,e| m[e[0].to_i] = e[1]; m}
     end
-
 
   end
 end

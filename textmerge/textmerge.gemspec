@@ -8,21 +8,16 @@ Gem::Specification.new do |spec|
   spec.version       = Textmerge::VERSION
   spec.authors       = ["Chris Simpson"]
   spec.email         = ["ctsimpson@gmail.com"]
-  spec.description   = "Merge Text using customized templates"
-  spec.summary       = "Good for configuration files and whatever"
-  spec.homepage      = "http://www.ctsimpson.com"
+  spec.description   = %q{TODO: Write a gem description}
+  spec.summary       = %q{TODO: Write a gem summary}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.bindir = "bin"
   spec.files         = `git ls-files`.split($/)
-  spec.executables   << 'textmerge'
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
-  
+
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec", "~> 2.1"
-  spec.add_development_dependency "guard-rspec", "~> 4.2"
-  spec.add_dependency "thor"
-  spec.add_dependency "highline", "~> 1.6"
 end

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'date'
 
 describe Textmerge::Merge do
   merge = ''
@@ -43,6 +42,5 @@ describe Textmerge::Merge do
       merge.merge_responses(answers,data).should eq(output)
     end
   end
-
 end
 

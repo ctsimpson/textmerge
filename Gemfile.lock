@@ -1,9 +1,7 @@
 PATH
   remote: .
   specs:
-    Textmerge (0.0.2)
-      highline (~> 1.6)
-      thor
+    textmerge (0.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -30,7 +28,6 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.2)
     method_source (0.8.1)
-    net-ssh (2.7.0)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -55,9 +52,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Textmerge!
   bundler (~> 1.3)
   guard-rspec
-  net-ssh
+  highline
   rake
   rspec (~> 2.1)
+  textmerge!

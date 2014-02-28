@@ -7,4 +7,4 @@ group :development do
   gem 'guard-rspec', require: false
 end
 
-gem 'net-ssh'
+gem 'highline'

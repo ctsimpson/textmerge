@@ -5,6 +5,9 @@ A custom tool that I use to generate reptitive config files from either an input
 
 Installation
 ------------
+Add github as a source if necessary : 
+▸       sudo gem sources -a http://gems.github.com
+
 ▸       gem install textmerge
 
 

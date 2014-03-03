@@ -10,7 +10,8 @@ describe Textmerge::Merge do
 
   let(:data) { "{1:First question} This is some text to ignore
                 this would be some additional text, and then {2:Second question}
-                and we have some more text before ending {3:Third question}" }
+                and we have some more text before ending {3:Third question}
+                Links are {1}, {2}, {3}." }
 
   let(:result) {{1=>"First question",2=>"Second question",3=>"Third question"}}
 
@@ -18,7 +19,8 @@ describe Textmerge::Merge do
 
   let(:output) { "Answer 1 This is some text to ignore
                 this would be some additional text, and then answer 2
-                and we have some more text before ending answer 3" }
+                and we have some more text before ending answer 3
+                Links are Answer 1, answer 2, answer 3." }
 
   context "when reading from input" do
     it "should read from an input file and output a hash of responses" do
@@ -29,6 +31,15 @@ describe Textmerge::Merge do
     it "should read a file and return an array of questions" do
       merge.get_requests(data).should eq(result)
       expect(merge.get_requests(data)[2]).to eq("Second question")
+    end
+
+    it "should order questions properly" do
+      text = "{2:Second question} and the {1:First question}"
+      expect(merge.get_requests(text)[1]).to eq("First question")
+    end
+
+    it "should raise an exception when there is a blank question" do
+      pending "exception testing"
     end
   end
 

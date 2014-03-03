@@ -3,6 +3,6 @@
 $:.unshift(File.expand_path(File.dirname(__FILE__) + '/../lib'))
 
 require 'textmerge'
-require 'textmerge/cli'
+require 'cli'
 
 Textmerge::CLI::Main.start

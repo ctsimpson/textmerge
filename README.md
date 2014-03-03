@@ -1,11 +1,11 @@
-#Textmerge Collection
+#Textmerge 
 
-A collection of tools I have put together that I regularly use as a Network Engineer
+A custom tool that I use to generate reptitive config files from either an input file or generated questions.
 
 
 Installation
 ------------
-▸       gem install Textmerge
+▸       gem install textmerge
 
 
 Help output
@@ -13,9 +13,9 @@ Help output
 
 SYNOPSIS
 
-* Textmerge help [COMMAND]                 # Describe available commands or one specific command
-* Textmerge merge -t, --template=TEMPLATE  # Merge input with your custom template
-* Textmerge version                        # Version of Textmerge
+* textmerge help [COMMAND]                 # Describe available commands or one specific command
+* textmerge merge -t, --template=TEMPLATE  # Merge input with your custom template
+* textmerge version                        # Version of Textmerge
 
 
 Merge Command
@@ -53,6 +53,6 @@ GLOBAL OPTIONS
 Sample Usage
 ------------
 
-    Textmerge merge -t template.txt
+    textmerge merge -t template.txt
 
 

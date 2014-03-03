@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    textmerge (0.0.2)
+    textmerge (0.0.3)
 
 GEM
   remote: https://rubygems.org/

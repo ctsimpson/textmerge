@@ -19,14 +19,14 @@ module Textmerge
       File.open(data_file, 'r') do |file|
         collection = file.map { |line| line.chomp.split(':') }
       end
-      collection.sort
+      collection.sort!
       array_to_hash(collection)
     end
 
     def get_requests(data)
       regex = /\{(\d)\:(.*?)\}/
       collection = data.scan(regex)
-      collection.sort
+      collection.sort!
       array_to_hash(collection)
     end
 

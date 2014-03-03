@@ -38,7 +38,7 @@ I can see that you live in {2:Where do you live}.  {2} is a great place to live.
 EXAMPLE INPUT FILE
 
 1:Chris<br/>
-2:Campbell, Ca.
+2:Mountain View, Ca.
 
 **If no input file is provided, then you are prompted with each question individually, in order**
 

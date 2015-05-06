@@ -19,15 +19,14 @@ module Textmerge
       File.open(data_file, 'r') do |file|
         collection = file.map { |line| line.chomp.split(':') }
       end
-      collection.sort!
+      # collection.sort!
       array_to_hash(collection)
     end
 
     def get_requests(data)
       regex = /\{(\d{1,3})\:(.*?)\}/
       collection = data.scan(regex)
-      sorted = collection.sort
-      array_to_hash(sorted)
+      array_to_hash(collection)
     end
 
     def get_responses(requests)
@@ -39,7 +38,7 @@ module Textmerge
 
     def merge_responses(responses,data)
       responses.each do |k,v|
-        data.gsub!(/\{#{k}.*?\}/,v)
+        data.gsub!(/\{#{k}\:.*?\}/,v)
       end
       data
     end
@@ -56,6 +55,7 @@ module Textmerge
 
     def array_to_hash(array)
       array.inject({}) {|m,e| m[e[0].to_i] = e[1]; m}
+      # array.sort_by { | num,value | num}
     end
 
   end

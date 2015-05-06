@@ -26,8 +26,8 @@ module Textmerge
     def get_requests(data)
       regex = /\{(\d{1,3})\:(.*?)\}/
       collection = data.scan(regex)
-      collection.sort!
-      array_to_hash(collection)
+      sorted = collection.sort_by(&:to_i)
+      array_to_hash(sorted)
     end
 
     def get_responses(requests)

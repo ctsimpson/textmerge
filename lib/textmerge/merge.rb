@@ -54,7 +54,7 @@ module Textmerge
     end
 
     def array_to_hash(array)
-      sorted = array.sort_by { |m,e| m }
+      sorted = array.sort_by { |m,e| m.to_i }
       sorted.inject({}) {|m,e| m[e[0].to_i] = e[1]; m}
     end
 
